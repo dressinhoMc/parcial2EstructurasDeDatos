@@ -206,8 +206,36 @@ public class Tree<T extends Comparable<T>> {
     }
 
 
-//    private int contarEquiposEnRango(){
-//
-//    }
+    public int contarEquiposEnRango(TreeNode<Equipo> root, int lowerLimit, int upperLimit) {
+
+        //casos base
+        if(root == null) return 0;
+        if(lowerLimit > upperLimit) return 0;
+
+        int nodo = root.getData().getCodigo();
+
+        int left = 0;
+        int right = 0;
+
+        // caso recursivo izquierda
+        if (nodo > lowerLimit) {
+            left = contarEquiposEnRango(root.getLeft(), lowerLimit, upperLimit);
+        }
+
+        // caso recursivo derecha
+        if (nodo < upperLimit) {
+            right = contarEquiposEnRango(root.getRight(), lowerLimit, upperLimit);
+        }
+
+        int actual = 0;
+        if ((lowerLimit <= nodo) && (nodo <= upperLimit)) {
+            actual = 1;
+        }
+
+        return actual + left + right;
+
+    }
+
+
 
 }
