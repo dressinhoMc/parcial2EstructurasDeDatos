@@ -21,4 +21,11 @@ public class Operacion {
     public void setEstado(boolean estado) {
         this.estado = estado;}
 
+    @Override
+    public String toString() {
+        return "Operacion{" +
+                "ID='" + ID + '\'' +
+                ", estado=" + estado +
+                '}';
+    }
 }

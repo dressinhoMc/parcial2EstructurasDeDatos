@@ -35,11 +35,15 @@ public class Stack<T> {
         }
     }
 
+    public SimpleNode<T> getTop(){
+        return this.top;
+    }
+
     public T peek(){
         return top.getData();
     }
 
-    private Stack<T> cloneRecursivo(SimpleNode<T> node) {
+    public Stack<T> cloneRecursivo(SimpleNode<T> node) {
         if (node == null) {
             return new Stack<>();}
         Stack<T> cloned = cloneRecursivo(node.getNext());

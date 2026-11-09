@@ -29,7 +29,7 @@ public class HistorialOperaciones {
         if(n<=0){
             return new Stack<>();
         } int finalizador= n;
-        Stack<Operacion> pilaAux= this.historial;
+        Stack<Operacion> pilaAux= historial.cloneRecursivo(historial.getTop());
         Stack<Operacion> pilaPreRetornar= new Stack<>();
         Stack<Operacion> pilaRetornar= new Stack<>();
         if(pilaAux.isEmpty()){
@@ -39,7 +39,8 @@ public class HistorialOperaciones {
             Operacion aux= pilaAux.pop();
             if(aux.getEstado()== true){
                 pilaPreRetornar.push(aux);
-            } finalizador--;
+                finalizador--;
+            }
             if(finalizador== 0){
                 while (pilaPreRetornar.getSize()!= 0){
                     Operacion auxInvertir= pilaPreRetornar.pop();
