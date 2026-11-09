@@ -56,7 +56,7 @@ public class MainPunto1 {
                     break;
 
                 case 4:
-                    System.out.println("¡Saliendo del sistema de historial. Éxitos con la sustentación!");
+                    System.out.println("¡Saliendo del sistema de historial!");
                     break;
 
                 default:
@@ -104,4 +104,6 @@ public class MainPunto1 {
             pila.push(aux.pop());
         }
     }
+
+
 }
