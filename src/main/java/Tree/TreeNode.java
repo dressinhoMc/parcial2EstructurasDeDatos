@@ -1,4 +1,4 @@
-package Tree;
+package main.java.Tree;
 
 public class TreeNode<T> {
     private T data;
