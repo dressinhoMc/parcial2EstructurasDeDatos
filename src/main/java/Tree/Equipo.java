@@ -1,4 +1,4 @@
-package Tree;
+package main.java.Tree;
 
 public class Equipo implements Comparable<Equipo> {
 

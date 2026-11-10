@@ -1,4 +1,4 @@
-package Tree;
+package main.java.Tree;
 
 public class App4 {
     static void main(String[] args) {
